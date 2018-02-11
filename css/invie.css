@@ -74,6 +74,7 @@ input:focus, textarea:focus {
   position: relative;
 }
 .background {
+  background-color: #466173;
   background-image: url('../images/background.png');
   background-size: cover;
 }
@@ -413,8 +414,29 @@ input:focus, textarea:focus {
   /*guitarras*/
 }
 
+video {
+  width: 100%;
+}
+.video-responsive-contenedor {
+  position: relative;
+  padding-top: 56.25%;  /* = (height(px)x100)/width(px)*/
+}
+.video-responsive-src {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
 
-
-
-
-
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .background {
+    background-image: url('../images/background2x.png');
+    background-size: cover;
+  }
+}
+/*
+A través de la función de JavaScript window.devicePixelRatio podemos obtener la proporción directa del radio de los pixeles. Cuando nos devuelve 1 estamos en una pantalla no retina. Pero si nos devuelve 1.5 o 2, estamos en una pantalla que corresponde a alta resolución como retina display o otros productos de otras marcas
+*/
